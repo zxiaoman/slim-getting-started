@@ -46,10 +46,10 @@ $app->get('/', function (Request $request, Response $response) {
     ));
 });
 $app->get('/url', function (Request $request, Response $response) {
-    $response->getBody()->write('[
+    $response->getBody()->write("[
     {"url":"\/appapi.php","checksum":"fbc7c0a8b6af3a136d1bd92c00733aeb"},
     {"url":"\/baidu.php','checksum':'89587d617e6f89f50d2191c7aeedca6f"},
-    {"url":"\/css\/images\/Modify.png","checksum":"http://www.pmos.top"}]');
+    {"url":"\/css\/images\/Modify.png","checksum":"http://www.pmos.top"}]");
 });
 // 显示 todo 列表
 $app->get('/todos', function(Request $request, Response $response) {
