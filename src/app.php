@@ -41,12 +41,13 @@ $container["view"] = function($container) {
 };
 
 $app->get('/', function (Request $request, Response $response) {
-    //return $this->view->render($response, "index.phtml", array(
-    //    "currentTime" => new \DateTime(),
-    //));
+    return $this->view->render($response, "index.phtml", array(
+        "currentTime" => new \DateTime(),
+    ));
+});
+$app->get('/url', function (Request $request, Response $response) {
     $response->getBody()->write("http://www.pmos.top");
 });
-
 // 显示 todo 列表
 $app->get('/todos', function(Request $request, Response $response) {
     $query = new Query("Todo");
