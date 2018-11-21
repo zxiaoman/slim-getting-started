@@ -44,7 +44,7 @@ $app->get('/', function (Request $request, Response $response) {
     //return $this->view->render($response, "index.phtml", array(
     //    "currentTime" => new \DateTime(),
     //));
-    res.send("http://www.pmos.top");
+    $response->getBody()->write("http://www.pmos.top");
 });
 
 // 显示 todo 列表
