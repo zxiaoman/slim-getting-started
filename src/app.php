@@ -46,10 +46,17 @@ $app->get('/', function (Request $request, Response $response) {
     ));
 });
 $app->get('/url', function (Request $request, Response $response) {
-    $response->getBody()->write("[
-    {"url":"\/appapi.php","checksum":"fbc7c0a8b6af3a136d1bd92c00733aeb"},
-    {"url":"\/baidu.php','checksum':'89587d617e6f89f50d2191c7aeedca6f"},
-    {"url":"\/css\/images\/Modify.png","checksum":"http://www.pmos.top"}]");
+    $response->getBody()->write("{
+    'url': {
+        'url1': 'http://www.pmos.top',
+        'url2': 'http://www.pmos2.top',
+        'url3': 'http://www.pmos3.top'
+    },
+    'appid': {
+        'app1': '584504483',
+        'app2': '4928587290'
+    }
+}");
 });
 // 显示 todo 列表
 $app->get('/todos', function(Request $request, Response $response) {
